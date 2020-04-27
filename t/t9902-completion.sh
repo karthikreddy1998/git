@@ -1351,8 +1351,7 @@ test_expect_failure 'git switch - with -C and --no-track, complete all reference
 	EOF
 '
 
-# TODO: completion does not yet recognize --orphan
-test_expect_failure 'git switch - with --orphan, do not complete anything' '
+test_expect_success 'git switch - with --orphan, do not complete anything' '
 	test_completion "git switch --orphan " <<-\EOF
 
 	EOF
